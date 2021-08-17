@@ -1,0 +1,28 @@
+.section-wrap {
+    position: relative;
+
+    &__icon {
+        a {
+            width: 64px;
+            height: 64px;
+            position: absolute;
+            left: 50%;
+            bottom: 7%;
+            transform: translateX(-50%);
+            background-color: $light-gray;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, .25);
+            background-clip: content-box;
+        }
+    }
+
+    &__img {
+        width: 30px;
+        height: 30px;
+        fill: $red;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

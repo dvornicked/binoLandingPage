@@ -1,0 +1,26 @@
+.menu {
+    ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        li {
+            margin: 0 5px;
+        }
+
+        a {
+            color: $light-gray;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid transparent;
+            transition: color 300ms, border-bottom-color 300ms;
+
+            &:hover {
+                color: $red;
+                border-bottom-color: $red;
+            }
+        }
+    }
+}

@@ -1,0 +1,130 @@
+.advantages {
+    border-bottom: $advantages-line 1px solid;
+    padding-bottom: 60px;
+    margin-bottom: 140px;
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__element {
+        flex-basis: 23.5%;
+        text-align: center;
+        margin: 20px 0;
+
+        &:hover {
+            .advantages__icon {
+                transform: rotate(-45deg);
+                border-color: $red;
+
+                img, svg {
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+            }
+
+            .advantages__title {
+                color: $red;
+
+                &::after {
+                    background-color: $red;
+                    border-bottom-color: lighten($red, 25%);
+                }
+            }
+        }
+    }
+
+    &__text {
+        font-family: "Source Sans Pro";
+        font-weight: 300;
+        letter-spacing: 0.9px;
+        line-height: 20px;
+        font-size: 13px;
+        margin: 15px 0;
+        color: $advantages-gray;
+    }
+
+    &__title {
+        font-family: "Open Sans";
+        color: $advantages-gray-title;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 1.35px;
+        font-size: 18px;
+        transition-duration: 500ms;
+        transition-property: color;
+
+        &::after {
+            content: "";
+            width: 41px;
+            height: 1px;
+            background-color: #888888;
+            border-bottom: 1px solid #e1e1e1;
+            display: block;
+            margin: 15px auto;
+            transition: 500ms;
+            transition-property: border-bottom-color, background-color;
+
+        }
+    }
+
+    &__icon {
+        width: 73px;
+        height: 73px;
+        border: 2px solid $advantages-border-gray;
+        position: relative;
+        margin: 20px auto;
+        transition: 500ms;
+        transition-property: border-color, transform;
+
+        img, svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            fill: $red;
+            transition: 500ms;
+            transition-property: transform;
+        }
+    }
+    &__img1 {
+        width: 32px;
+        height: 12px;
+    }
+    &__img2 {
+        width:27px;
+        height: 23px;
+    }
+    &__img3 {
+        width: 30px;
+        height: 35px;
+    }
+    &__img4 {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 980px) {
+    .advantages {
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .advantages {
+        &__element {
+            flex-basis: 49%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .advantages {
+        &__element {
+            flex-basis: 100%;
+        }
+    }
+}

@@ -5,3 +5,16 @@
         @include btn($two-button: true);
     }
 }
+
+@media (max-width: 560px) {
+    .buttons {
+        a {
+            display: block;
+            margin: 10px auto;
+
+            &:first-child {
+                margin: 15px auto;
+            }
+        }
+    }
+}

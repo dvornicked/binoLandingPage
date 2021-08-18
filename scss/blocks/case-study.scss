@@ -1,0 +1,44 @@
+.case-study {
+    background-color: $light-gray;
+    padding: 140px 0;
+
+    &__title {
+        font-family: "Source Sans Pro";
+        color: $advantages-gray-title;
+        font-size: 36px;
+        letter-spacing: 3.6px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__desc {
+        font-size: 14px;
+        line-height: 29px;
+        margin: 20px 0;
+        text-align: center;
+        color: $advantages-gray;
+    }
+
+    &__devider {
+        @include devider($advantages-gray);
+    }
+
+    &__block {
+        display: flex;
+        margin-top: 60px;
+        align-items: center;
+    }
+
+    &__left {
+        flex-basis: 665px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__right {
+        img {
+            margin-left: -80px;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.ideas {
+    background-color: $white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    padding: 30px 50px 80px;
+
+    &__icon {
+        width: 127px;
+        height: 127px;background-color: $red;
+        margin: 50px auto;
+        position: relative;
+        clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+
+        img, svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            fill: $white;
+            width: 35px;
+            height: 40px;
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 600;
+        color: $advantages-gray-title;
+        letter-spacing: 1.35px;
+        text-align: center;
+        text-transform: uppercase;
+
+        &::after {
+            content: "";
+            width: 41px;
+            height: 1px;
+            background-color: #888888;
+            border-bottom: 1px solid #e1e1e1;
+            display: block;
+            margin: 15px auto;
+        }
+    }
+
+       &__text {
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        font-weight: 300;
+        letter-spacing: 1.05px;
+        font-family: "Source Sans Pro";
+        color: $advantages-gray;
+    }
+
+    &__btn {
+        @include btn() {
+            display: block;
+            width: 145px;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.12px;
+            padding: 15px 0;
+            margin: 50px auto 20px;
+            font-weight: 600;
+        }
+    }
+}

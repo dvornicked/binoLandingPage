@@ -24,6 +24,7 @@
   padding: 18px 0;
   box-sizing: border-box;
   transition: background-color 500ms, border-color 500ms;
+  @content;
 
   &:hover {
     background-color: darken($red, 10%);

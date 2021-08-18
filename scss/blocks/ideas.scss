@@ -64,3 +64,37 @@
         }
     }
 }
+
+@media (max-width: 980px) {
+    .case-study {
+        padding: 50px 0;
+
+        &__left {
+            flex-basis: 50%;
+            padding: 30px;
+        }
+        &__right {
+            flex-basis: 50%;
+
+            img {
+                max-width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .case-study {
+        &__block {
+            flex-direction: column;
+        }
+        &__left {
+            padding: 20px;
+        }
+        &__rigth {
+            margin-top: 30px;
+        }
+        
+    }
+}

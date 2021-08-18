@@ -1,0 +1,97 @@
+.service {
+    background-color: $service-bg;
+    max-width: 1920px;
+    margin: 140px auto;
+    padding: 150px 0;
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 46%;
+        height: 100%;
+        display: block;
+        background: url('../../img/services-bg.jpg');
+        background-size: cover;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &__block {
+        width: 54%;
+        text-align: right;
+    }
+
+    &__title {
+        font-family: "Source Sans Pro";
+        color: $light-gray;
+        font-size: 36px;
+        line-height: 36px;
+        letter-spacing: 3.6px;
+        text-transform: uppercase;
+        font-weight: 700;
+        border-right: 6px solid $red;
+        margin-right: 80px;
+        padding-right: 25px;
+    }
+
+    &__element {
+        max-width: 665px;
+        margin: 55px 80px 55px auto;
+        position: relative;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__name {
+        font-size: 18px;
+        color: $red;
+        font-weight: 600;
+        line-height: 29px;
+    }
+    &__text {
+        font-size: 14px;
+        color: $advantages-gray;
+        line-height: 29px;
+        font-family: "Source Sans Pro";
+    }
+
+    &__icon {
+        width: 64px;
+        height: 64px;
+        position: absolute;
+        right: -117px;
+        top: 50%;
+        background-color: $light-gray;
+        border-radius: 50%;
+        z-index: 1;
+        transform: translateY(-50%);
+        border: 5px solid rgba(255, 255, 255, .25);
+        background-clip: content-box;
+
+        img, svg {
+            fill: $red;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__img {
+        width: 27px;
+        height: 27px;
+    }
+
+    &__img2 {
+        width: 35px;
+        height: 29px;
+    }
+
+    &__img3 {
+        width: 35px;
+        height: 30px;
+    }
+}

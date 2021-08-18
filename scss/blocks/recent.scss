@@ -118,3 +118,37 @@
         }
     }
 }
+
+@media (max-width: 980px) {
+    .recent {
+        margin-top: 50px;
+
+        &__element {
+            p {
+                bottom: 10px;
+
+                span {
+                    &:first-child {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .recent {
+        &__element {
+            flex-basis: 50%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .recent {
+        &__element {
+            flex-basis: 100%;
+        }
+    }
+}

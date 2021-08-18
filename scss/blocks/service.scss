@@ -95,3 +95,42 @@
         height: 30px;
     }
 }
+
+@media (max-width: 980px) {
+    .service{
+        margin: 50px 0;
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .service {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        &::after {
+            display: none;
+        }
+        &__block {
+            width: 100%;
+            text-align: center;
+        }
+        &__title {
+            padding-right: 0;
+            padding-left: 25px;
+            border-right: none;
+            border-left: 6px solid $red;
+        }
+
+        &__element {
+            max-width: 100%;
+            margin: 25px 0;
+            padding-right: 80px;
+            box-sizing: border-box;
+        }
+
+        &__icon {
+            right: 0;
+        }
+    }
+}

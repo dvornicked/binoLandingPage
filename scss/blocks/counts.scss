@@ -1,0 +1,89 @@
+.counts {
+    background: url('../../img/counts-bg.jpg') center no-repeat;
+    background-size: cover;
+    padding: 120px 0 110px;
+    position: relative;
+
+    &__block {
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    &__element {
+        flex-basis: 20%;
+        text-align: center;
+        margin: 20px 0;
+
+        p {
+            font-family: "Source Sans Pro";
+            color: $white;
+            margin: 10px 0;
+        }
+    }
+
+    &__number {
+        font-weight: 700;
+        font-size: 30px;
+        letter-spacing: 1.5px;
+    }
+
+    &__desc {
+        letter-spacing: 0.9px;
+        line-height: 30px;
+        font-size: 18px;
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: block;
+        background-color: rgba(0, 0, 0, .15);
+    }
+
+    &__circle {
+        width: 109px;
+        height: 109px;
+        border: 1px solid $white;
+        border-radius: 50%;
+        margin: 0 auto 40px;
+        position: relative;
+
+        img, svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            fill: $white;
+        }
+    }
+
+    &__img {
+        &1 {
+            width: 37px;
+            height: 32px;
+        }
+        &2 {
+            width: 40px;
+            height: 40px;
+        }
+        &3 {
+            width: 35px;
+            height: 40px;
+        }
+        &4 {
+            width: 35px;
+            height: 35px;
+        }
+        &5 {
+            width: 25px;
+            height: 35px;
+        }
+    }
+}

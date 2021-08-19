@@ -1,0 +1,150 @@
+.team {
+    margin-top: 140px;
+    padding: 140px 0 470px;
+
+    background: url('../../img/team-line.png') center bottom no-repeat,
+                url('../../img/team-bg.jpg') center no-repeat;
+    
+    
+    &__wrap {
+        position: relative;
+    }
+
+    &__title {
+        font-family: "Source Sans Pro";
+        color: $white;
+        font-size: 36px;
+        letter-spacing: 3.6px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__desc {
+        font-size: 14px;
+        line-height: 29px;
+        margin: 20px 0;
+        text-align: center;
+        color: $light-gray;
+    }
+
+    &__devider {
+        @include devider($white);
+    }
+
+    &__element {
+        position: absolute;
+        width: 200px;
+
+        &:nth-of-type(1) {
+            left: 0;
+            bottom: -230px;
+        }
+        &:nth-of-type(2) {
+            left: 265px;
+            bottom: -195px;
+        }
+        &:nth-of-type(3) {
+            left: 530px;
+            bottom: -195px;
+        }
+        &:nth-of-type(4) {
+            right: 190px;
+            bottom: -230px;
+        }
+        &:nth-of-type(5) {
+            right: 0;
+            bottom: -205px;
+        }
+
+        &:hover {
+            &::after, .team__info {
+                opacity: 1;
+            }
+            .team__img {
+                transform: scale(1.3);
+            }
+            .team__img {
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &::after {
+            content: "";
+            width: 1px;
+            height: 50px;
+            display: block;
+            background-color: $white;
+            position: absolute;
+            left: 50%;
+            bottom: -60px;
+            transform: translate(-50%);
+            opacity: 0;
+            transition-duration: 500ms;
+            transition-property: opacity;
+        }
+    }
+
+    &__img {
+        width: 51px;
+        height: 51px;
+        border: 3px solid $red;
+        border-radius: 50%;
+        margin: 0 auto;
+        overflow: hidden;
+        transition-duration: 500ms;
+        transition-property: transform;
+        position: relative;
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border-radius: 50%;
+            background-color: rgba(231, 76, 60, 0.5);
+            opacity: 0;
+            transition-duration: 500ms;
+            transition-property: opacity;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            transform: scale(1.05);
+        }
+    }
+
+    &__info {
+        position: absolute;
+        bottom: -160px;
+        width: 100%;
+        opacity: 0;
+        transition-duration: 500ms;
+        transition-property: opacity;
+    }
+
+    &__name {
+        font-size: 24px;
+        line-height: 24px;
+        color: $red;
+        letter-spacing: 1.8px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__post {
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 1.4px;
+        font-family: "Source Sans Pro";
+        margin: 10px 0;
+        color: $white;
+        text-align: center;
+    }
+}

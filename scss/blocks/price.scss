@@ -35,6 +35,19 @@
         margin-top: 20px;
         background-color: $light-gray;
 
+
+        &:hover {
+            .price__top {
+                background-color: $red;
+            }
+
+            .price__bottom {
+                p {
+                    color: $red;
+                }
+            }
+        }
+
         &_red {
             .price__top {
                 background-color: $red;
@@ -53,6 +66,8 @@
     &__top {
         background-color: $advantages-gray;
         padding-bottom: 90px;
+        transition-duration: 500ms;
+        transition-property: background-color;
     }
 
     &__name {
@@ -82,6 +97,8 @@
             line-height: 40px;
             margin: 0;
             color: $advantages-gray;
+            transition-duration: 500ms;
+            transition-property: color;
 
             span {
                 display: block;

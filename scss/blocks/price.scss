@@ -140,3 +140,30 @@
         }
     }
 }
+
+@media (max-width: 980px) {
+    .price {
+        margin: 50px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .price {
+        &__block {
+            justify-content: center;
+        }
+        &__element {
+            flex-basis: 45%;
+            margin: 20px 2.5%;
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .price {
+        &__element {
+            margin: 15px 0;
+            flex-basis: 100%;
+        }
+    }
+}

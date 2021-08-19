@@ -1,0 +1,125 @@
+.price {
+    margin: 140px 0;
+
+    &__title {
+        font-family: "Source Sans Pro";
+        color: $advantages-gray-title;
+        font-size: 36px;
+        letter-spacing: 3.6px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__desc {
+        font-size: 14px;
+        line-height: 29px;
+        margin: 20px 0;
+        text-align: center;
+        color: $advantages-gray;
+    }
+
+    &__devider {
+        @include devider($advantages-gray);
+    }
+
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 60px;
+    }
+
+    &__element {
+        flex-basis: 32.4%;
+        margin-top: 20px;
+        background-color: $light-gray;
+
+        &_red {
+            .price__top {
+                background-color: $red;
+            }
+
+            .price__bottom {
+                .price__number {
+                    p {
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+
+    &__top {
+        background-color: $advantages-gray;
+        padding-bottom: 90px;
+    }
+
+    &__name {
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        color: $white;
+        margin: 0;
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    &__number {
+        width: 153px;
+        border: 10px solid rgba(244, 245, 249, .25);
+        border-radius: 50%;
+        margin: -86px auto;
+        background-color: $white;
+        padding: 46px 0;
+
+        p {
+            text-align: center;
+            font-size: 39px;
+            font-family: "Source Sans Pro";
+            font-weight: 700;
+            line-height: 40px;
+            margin: 0;
+            color: $advantages-gray;
+
+            span {
+                display: block;
+                font-size: 13px;
+                line-height: 21px;
+                font-weight: 400;
+                color: $advantages-gray;
+            }
+        }
+    }
+
+    &__bottom {
+        padding-bottom: 20px;
+    }
+
+    &__list {
+        text-align: center;
+        margin: calc(40px + 86px) 0 40px;
+
+        li {
+            font-size: 14px;
+            line-height: 20px;
+            margin: 20px 0;
+            font-weight: 600;
+            color: $advantages-gray
+        }
+    }
+
+    &__btn {
+        @include btn($advantages-gray) {
+            display: block;
+            width: 145px;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.12px;
+            padding: 15px 0;
+            margin: 50px auto 20px;
+            font-weight: 600;
+        }
+    }
+}

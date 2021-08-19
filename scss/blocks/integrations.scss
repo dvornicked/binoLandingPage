@@ -1,0 +1,52 @@
+.integrations {
+    background-color: $light-gray;
+
+    padding: 140px 0;
+
+    &__title {
+        font-family: "Source Sans Pro";
+        color: $advantages-gray-title;
+        font-size: 36px;
+        letter-spacing: 3.6px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__desc {
+        font-size: 14px;
+        line-height: 29px;
+        margin: 20px 0;
+        text-align: center;
+        color: $advantages-gray;
+    }
+
+    &__devider {
+        @include devider($advantages-gray);
+    }
+
+    &__block {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__element {
+        flex-basis: 18%;
+        margin: 15px 0;
+        height: 100px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        box-shadow: 0 1px 3px rgba(31, 31, 31, .09);
+
+        span {
+            align-self: center;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+}

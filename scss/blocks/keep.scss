@@ -1,0 +1,141 @@
+.keep {
+    background-color: $light-gray;
+    padding-bottom: 140px;
+
+
+    &__title {
+        font-family: "Source Sans Pro";
+        color: $advantages-gray-title;
+        font-size: 36px;
+        letter-spacing: 3.6px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__desc {
+        font-size: 14px;
+        line-height: 29px;
+        margin: 20px 0;
+        text-align: center;
+        color: $advantages-gray;
+    }
+
+    &__devider {
+        @include devider($advantages-gray);
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 60px;
+    }
+
+    &__left {
+        flex-basis: 40.8%;
+        background-color: $white;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+        border-radius: 2px/5px;
+        padding: 30px 95px;
+        box-sizing: border-box;
+    }
+
+    &__right {
+        flex-basis: 56.8%;
+        background-color: $white;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+        border-radius: 3px/5px;
+        padding: 0 95px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__form {
+        flex-basis: 100%;
+    }
+
+    &__info {
+        margin: 55px 0;
+        p {
+            &:first-child {
+                line-height: 24px;
+                font-size: 24px;
+                font-weight: 600;
+                color: $red;
+                font-family: "Source Sans Pro";
+                margin-bottom: 10px;
+            }
+            &:last-child {
+                color: $advantages-gray;
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+        a {
+            color: $advantages-gray;
+            font-size: 18px;
+            line-height: 24px;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__input, &__textarea {
+        position: relative;
+        margin: 20px 0;
+
+        input, textarea {
+            color: $advantages-gray;
+            font-size: 14px;
+            line-height: 24px;
+            width: 100%;
+            font-weight: 600;
+            border: none;
+            border-bottom: 1px solid $advantages-border-gray;
+            padding: 7px 0;
+            box-shadow: none;
+
+            &:focus + label, &:valid + label {
+                transform: translateY(-16px);
+                font-size: 12px;
+            }
+        }
+
+        textarea {
+            resize: none;
+            outline: none;
+            height: 100px;
+        }
+
+        label {
+            position: absolute;
+            color: $advantages-gray;
+            font-size: 14px;
+            line-height: 24px;
+            width: 100%;
+            font-weight: 600;
+            left: 0;
+            top: 5px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            pointer-events: none;
+            transition-duration: 200ms;
+        }
+    }
+
+    &__button {
+        margin: 25px 0;
+        @include btn() {
+            cursor: pointer;
+            width: 157px;
+            padding: 14px;
+        };
+    }
+}

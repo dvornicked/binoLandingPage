@@ -1,0 +1,19 @@
+.footer {
+    background-color: $service-bg;
+    padding: 35px 0;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__right {
+        p {
+            font-size: 14px;
+            line-height: 24px;
+            color: $advantages-gray;
+            font-weight: 600;
+        }
+    }
+}

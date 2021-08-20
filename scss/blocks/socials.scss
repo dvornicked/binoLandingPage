@@ -1,0 +1,20 @@
+.socials {
+    display: flex;
+    align-items: center;
+
+    li {
+        margin-right: 20px;
+    }
+
+    &__img {
+        fill: $advantages-gray;
+        width: 20px;
+        height: 25px;
+        transition-duration: 200ms;
+        transition-property: fill;
+
+        &:hover {
+            fill: $red;
+        }
+    }
+}

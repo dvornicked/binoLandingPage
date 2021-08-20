@@ -1,0 +1,125 @@
+.blog {
+    border-top: 1px solid #d8d9db;
+    padding: 140px 0;
+    background-color: $light-gray;
+
+    &__title {
+        font-family: "Source Sans Pro";
+        color: $advantages-gray-title;
+        font-size: 36px;
+        letter-spacing: 3.6px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__desc {
+        font-size: 14px;
+        line-height: 29px;
+        margin: 20px 0;
+        text-align: center;
+        color: $advantages-gray;
+    }
+
+    &__devider {
+        @include devider($advantages-gray);
+    }
+
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1920px;
+        margin: 60px auto 0;
+    }
+
+    &__element {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 50%;
+        background-color: $red;
+
+        &_reverse {
+            flex-direction: row-reverse;
+
+            .blog__post::before {
+                border-right: 30px solid transparent;
+                border-left: 25px solid $red;
+                left: auto;
+                right: -55px;
+            }
+        }
+    }
+
+    &__img {
+        flex-basis: 50%;
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__post {
+        flex-basis: 50%;
+        padding: 40px 25px 25px 40px;
+        box-sizing: border-box;
+        position: relative;
+        align-self: center;
+
+        &::before {
+            content: "";
+            border: 30px solid transparent;
+            border-right: 25px solid $red;
+            position: absolute;
+            top: 50%;
+            left: -55px;
+            transform: translateY(-50%);
+        }
+    }
+
+    p {
+        margin: 20px 0;
+        color: $white;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    &__category {
+        font-size: 14px;
+        letter-spacing: 0.7px;
+    }
+
+    &__name {
+        font-size: 24px;
+        letter-spacing: 1.2px;
+        font-family: "Source Sans Pro";
+
+        &::after {
+            content: "";
+            width: 44px;
+            height: 4px;
+            background-color: $white;
+            display: block;
+            margin-top: 15px;
+        }
+    }
+
+    a {
+        color: $white;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 600;
+        font-style: italic;
+        text-decoration: none;
+        margin: 20px 0;
+        display: inline-block;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

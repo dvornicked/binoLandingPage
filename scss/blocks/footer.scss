@@ -17,3 +17,25 @@
         }
     }
 }
+
+@media (max-width: 580px) {
+    .footer {
+        &__wrap {
+            justify-content: center;
+        }
+
+        &__left {
+            flex-basis: 100%;
+        }
+
+        &__right {
+            text-align: center;
+            flex-basis: 100%;
+        }
+
+        .socials {
+           justify-content: center; 
+           margin-bottom: 10px;
+        }
+    }
+}
